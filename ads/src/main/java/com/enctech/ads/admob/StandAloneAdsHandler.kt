@@ -89,10 +89,10 @@ class StandAloneAdsHandler(
                 Log.d("Ads","AdMob Ad IImpression" )
             }
 
-            override fun onAdFailedToLoad(adError: LoadAdError?) {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
                 super.onAdFailedToLoad(adError)
 
-                Log.d("Ads","AdMob Ad Load Failed here ${adError?.message}" )
+                Log.d("Ads","AdMob Ad Load Failed here ${adError.message}" )
 
                 adMobAdListener?.adFailedToLoad(adError)
             }
